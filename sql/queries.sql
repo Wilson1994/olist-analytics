@@ -34,6 +34,12 @@ ORDER BY ym;
 -- --------------------------------------------------------
 
 -- топ-10 категорій за виторгом;
+1) health_beauty - 1233131.72
+2) watches_gifts - 1166176.98
+3) bed_bath_table - 1023434.76
+4) sports_leisure - 954852.55
+5) computers_accessories - 888724.61
+
 SELECT 
 	t.product_category_1 AS category_en,
     ROUND(SUM(oi.price), 2) AS revenue
