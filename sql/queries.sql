@@ -98,6 +98,8 @@ ORDER BY avg_score DESC;
 
 -- середній час доставки (різниця між датою купівлі і датою доставки);
 
+середній час доставки = 12.6
+
 SELECT
 	ROUND(AVG(julianday(order_delivered_6) - julianday(order_purchase_t)), 1) AS avg_delivery_day
 FROM olist_orders_dataset
@@ -107,6 +109,11 @@ WHERE order_status = 'delivered' AND order_delivered_6 IS NOT NULL;
 
 
 -- розподіл способів оплати.
+1) credit_card - 76795
+2) boleto - 19784
+3) voucher - 5775
+4) debit_card - 1529
+5) not_defined - 3
 
 SELECT
 	payment_type,
@@ -116,3 +123,4 @@ FROM olist_order_payments_dataset
 GROUP BY payment_type
 ORDER BY n DESC;
 
+-- --------------------------------------------------------
