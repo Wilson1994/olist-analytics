@@ -56,6 +56,12 @@ LIMIT 10;
 
 
 -- виторг за штатами (для карти в Tableau)
+1) SP - 5067633.16
+2) RJ - 1759651.13
+3) MG - 1552481.83
+4) RS - 728897.47
+5) PR - 666063.51
+
 SELECT
 	cu.customer_state,
     ROUND(SUM(oi.price), 2) AS revenue,
