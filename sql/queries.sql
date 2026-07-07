@@ -76,6 +76,12 @@ ORDER BY revenue DESC;
 -- --------------------------------------------------------
 
 -- середня оцінка (review_score) за категоріями;
+1) books_general_interest - 4.45
+2) costruction_tools_tools - 4.44
+3) books_imported - 4.4
+4) books_technical - 4.37
+5) luggage_accessories - 4.32
+
 SELECT
 	t.product_category_1 AS category_en,
     ROUND(AVG(r.review_score), 2) AS avg_score,
